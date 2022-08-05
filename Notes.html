@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Notes.css">
+</head>
+
+<body>
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>Welcome to Notes</h1>
+            <form action="">
+                <input type="text" id="note-title" placeholder="Title">
+                <textarea id="note-text" placeholder="Your Note"></textarea>
+
+                <button id="add-btn">Add Note</button>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Your Notes</h2>
+            <button id="${index}" onclick="backupNote(this.id)" class="notes-btn">Backup </button>
+            <button id="${index}" onclick="deleteCheckboxesChecked(this.id)" class="notes-btn">Delete </button>
+            <button id="${index}" onclick="archiveNote(this.id)" class="notes-btn">Archive</button>
+            <button id="${index}" onclick="showAllNote(this.id)" class="notes-btn">Show all</button>
+            
+            <div id="notes">
+
+                <div class="note">
+                    <input type="checkbox" class="delete-checkbox" id="${index}">
+                    <h3 class="note-title"> ${element.title} </h3>
+                     <p class="note-text"> ${element.text}</p>
+                     <button id="${index}"onclick="deleteNote(this.id)" class="note-btn">Delete Note</button>
+                     <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn">Edit Note</button>
+                     <p class="note-date"> ${date}</p>
+                 </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="Notes.js"></script>
+</body>
+
+</html>
